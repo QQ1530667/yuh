@@ -28,6 +28,17 @@
 
 #pragma  mark - BlurText
 
+- (void)cleanAllBlur
+{
+    for (UIView *subView in self.subviews)
+    {
+        if ([subView isKindOfClass:[FXBlurView class]])
+        {
+            [subView removeFromSuperview];
+        }
+    }
+}
+
 - (UITextRange *)textRangeFromNSRange:(NSRange)range
 {
     UITextPosition *beginning = self.beginningOfDocument;

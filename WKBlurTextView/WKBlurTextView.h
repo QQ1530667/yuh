@@ -18,4 +18,6 @@
 
 - (void)blurRange:(NSRange)range;
 
+- (void)cleanAllBlur;
+
 @end

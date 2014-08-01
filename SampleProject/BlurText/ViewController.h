@@ -13,4 +13,6 @@
 
 
 @property (nonatomic, retain) WKBlurTextView *blurTextView;
+@property (nonatomic, retain) UISwitch *blurSwitch;
+
 @end

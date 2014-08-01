@@ -26,13 +26,41 @@
 	// Do any additional setup after loading the view, typically from a nib.
     self.view.backgroundColor = [UIColor whiteColor];
     
-    _blurTextView = [[WKBlurTextView alloc] initWithFrame:CGRectMake(0, 0, 300, 400)];
-    _blurTextView.center = self.view.center;
+    _blurTextView = [[WKBlurTextView alloc] initWithFrame:CGRectMake(10, 60, 300, 400)];
     _blurTextView.text  = kDemoText;
     _blurTextView.editable = false;
     _blurTextView.font = [UIFont boldSystemFontOfSize: 20];
+    _blurTextView.backgroundColor = [UIColor whiteColor];
+    _blurTextView.textColor = [UIColor blackColor];
     [self.view addSubview: _blurTextView];
     
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(20,20,100,30)];
+    label.backgroundColor = [UIColor whiteColor];
+    label.text = @"Blur Effect";
+    [self.view addSubview:label];
+    
+    
+    _blurSwitch = [[UISwitch alloc] init];
+    _blurSwitch.frame = CGRectMake(150, 20, 100, 40);
+    [_blurSwitch addTarget:self action:@selector(onBlurSwitchChanged:) forControlEvents:UIControlEventValueChanged];
+    [self.view addSubview:_blurSwitch];
+}
+
+- (void)onBlurSwitchChanged:(UISwitch *)blurSwitch
+{
+    if (blurSwitch.on)
+    {
+        [self startBlur];
+    }
+    else
+    {
+        [self clearBlur];
+    }
+}
+
+
+- (void)startBlur
+{
     //blur by text
     NSArray *blurTexts = [NSArray arrayWithObjects:kBlurText1, kBlurText2, kBlurText3, nil];
     [_blurTextView blurTexts: blurTexts];
@@ -41,7 +69,10 @@
     [_blurTextView blurRange:NSMakeRange(2, 20)];
 }
 
-
+- (void)clearBlur
+{
+    [_blurTextView cleanAllBlur];
+}
 
 
 - (void)didReceiveMemoryWarning
