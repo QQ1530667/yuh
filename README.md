@@ -29,6 +29,10 @@ blur text by array of strings.
 
 blur text by NSRange.
 
+`- (void)cleanAllBlur;`
+
+remove all blur effect from textview.
+
 Preview Image
 -----------------
 ![preview image](demo_img_1.png)
