@@ -12,26 +12,20 @@ Support iOS 6+.
 
 3rd Library
 --------------------
-Use FXBlurView (https://github.com/nicklockwood/FXBlurView) to Implement Blur effect.
+Use [FXBlurView](https://github.com/nicklockwood/FXBlurView) to Implement Blur effect.
 
 WKBlurTextView methods
 -----------------------
   
-`
-- (void)blurText:(NSString *)blurText;
-`
+`- (void)blurText:(NSString *)blurText;`
 
 blur text by string.
   
-`
-- (void)blurTexts:(NSArray *)texts;
-`
+`- (void)blurTexts:(NSArray *)texts;`
 
 blur text by array of strings.
   
-`
-- (void)blurRange:(NSRange)range;
-`
+`- (void)blurRange:(NSRange)range;`
 
 blur text by NSRange.
 
