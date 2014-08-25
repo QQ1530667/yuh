@@ -10,7 +10,7 @@ Supported iOS & SDK Versions
 Support iOS 6+.
 
 
-3rd Library
+3rd Party Library
 --------------------
 Use [FXBlurView](https://github.com/nicklockwood/FXBlurView) to Implement Blur effect.
 
