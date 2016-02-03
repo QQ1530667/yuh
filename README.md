@@ -5,6 +5,10 @@ Purpose
 --------------
 subClass of UITextView can Blur part of texts inside textView.
 
+Show case
+--------------
+[appetize.io](https://appetize.io/app/e29j6rq3zeu73b4xrhj3cfg3cm?device=iphone5s&scale=75&orientation=portrait&osVersion=9.2)
+
 Supported iOS & SDK Versions
 -----------------------------
 Support iOS 6+.
